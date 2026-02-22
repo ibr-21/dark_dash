@@ -13,7 +13,7 @@ import {
   MdHelpCenter,
   MdLogout,
 } from "react-icons/md";
-import { auth, signOut } from "@/app/auth";
+
 
 const menuItems = [
   {
@@ -79,7 +79,7 @@ const menuItems = [
 ];
 
 const Sidebar = async () => {
-  const { user } = await auth();
+  const user = {username : "Eng. Ibrahim", img: "/profile.jpg"};
   return (
     <div className={styles.container}>
       <div className={styles.user}>

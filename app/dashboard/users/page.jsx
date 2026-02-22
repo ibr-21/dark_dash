@@ -7,10 +7,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 const UsersPage = async ({ searchParams }) => {
-  const q = searchParams?.q || "";
-  const page = searchParams?.page || 1;
-  const { count, users } = await fetchUsers(q, page);
+  // const q = searchParams?.q || "";
+  // const page = searchParams?.page || 1;
+  // const { count, users } = await fetchUsers(q, page);
 
+const users = [ {id:1, username: "John Doe", email: "john.doe@example.com", img: "/noavatar.png", phone: "123-456-7890", address: "123 Main St", isAdmin: true, isActive: true}]
   return (
     <div className={styles.container}>
       <div className={styles.top}>
@@ -68,7 +69,7 @@ const UsersPage = async ({ searchParams }) => {
           ))}
         </tbody>
       </table>
-      <Pagination count={count} />
+      <Pagination count={3} />
     </div>
   );
 };

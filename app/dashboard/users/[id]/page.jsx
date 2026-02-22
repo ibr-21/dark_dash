@@ -6,7 +6,7 @@ import Image from "next/image";
 const SingleUserPage = async ({ params }) => {
   
   const { id } = params;
-  const user = await fetchUser(id);
+  const user = {id:1, username: "Eng. Ibrahim", email: "engibr@example.com", img: "https://images.pexels.com/photos/874158/pexels-photo-874158.jpeg", phone: "123-456-7890", address: "123 Main St", isAdmin: true, isActive: true};
 
   return (
     <div className={styles.container}>

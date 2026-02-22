@@ -7,10 +7,16 @@ import { fetchProducts } from "@/app/lib/data";
 import { deleteProduct } from "@/app/lib/actions";
 
 const ProductsPage = async ({ searchParams }) => {
-  const q = searchParams?.q || "";
-  const page = searchParams?.page || 1;
-  const { count, products } = await fetchProducts(q, page);
+  // const q = searchParams?.q || "";
+  // const page = searchParams?.page || 1;
+  // const { count, products } = await fetchProducts(q, page);
 
+    const count = 3;
+    const products = [
+      {id:1, title: "Product 1", price: 100, stock: 10, color: "red", size: "M", cat: "kitchen", desc: "This is a product description."},
+      {id:2, title: "Product 2", price: 200, stock: 20, color: "blue", size: "L", cat: "computers", desc: "This is a product description."},
+      {id:3, title: "Product 3", price: 300, stock: 30, color: "green", size: "S", cat: "kitchen", desc: "This is a product description."},
+    ];
   return (
     <div className={styles.container}>
       <div className={styles.top}>

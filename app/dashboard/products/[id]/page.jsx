@@ -1,11 +1,10 @@
 import { updateProduct } from "@/app/lib/actions";
-import { fetchProduct } from "@/app/lib/data";
 import styles from "@/app/ui/dashboard/products/singleProduct/singleProduct.module.css";
 import Image from "next/image";
 
 const SingleProductPage = async ({ params }) => {
   const { id } = params;
-  const product = await fetchProduct(id);
+  const product = {id:1, title: "Product 1", price: 100, stock: 10, color: "red", size: "M", cat: "kitchen", desc: "This is a product description."};
 
   return (
     <div className={styles.container}>
